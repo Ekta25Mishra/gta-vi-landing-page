@@ -1,16 +1,49 @@
-# React + Vite
+# 🎮 GTA VI Inspired Animated Landing Page (React + GSAP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visually rich **GTA VI–inspired animated landing page** built using **React**, **GSAP**, and **Tailwind CSS**.  
+This project focuses on smooth intro animations, SVG masking, parallax mouse movement, and cinematic transitions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🔥 SVG mask intro animation using **GSAP Timeline**
+- 🎥 Smooth scale, rotate & opacity transitions
+- 🖱️ Mouse-move based **parallax effect**
+- 🧩 Conditional rendering after animation completion
+- 🎨 Fully responsive layout
+- ⚡ Built with **Vite** for fast performance
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React**
+- **GSAP (`@gsap/react`)**
+- **Tailwind CSS**
+- **Vite**
+- **Remix Icon**
+
+---
+
+🧠 What I Learned
+
+1.Creating SVG mask animations using GSAP
+2.Managing animation flow with GSAP timelines
+3.Handling animations conditionally with React state
+4.Implementing mouse-based parallax effects
+5.Combining Tailwind CSS with complex animations
+
+---
+
+⚠️ Disclaimer
+
+This project is for educational and practice purposes only.
+All visual inspiration belongs to Rockstar Games. No assets are used commercially.
+
+---
+
+⭐ Support
+
+If you like this project, please consider giving it a star ⭐
+It really motivates me to build more!
