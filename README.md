@@ -1,49 +1,41 @@
-# 🎮 GTA VI Inspired Animated Landing Page (React + GSAP)
+# 🎮 GTA VI Inspired Animated Landing Page | React, GSAP, Tailwind
 
-A visually rich **GTA VI–inspired animated landing page** built using **React**, **GSAP**, and **Tailwind CSS**.  
-This project focuses on smooth intro animations, SVG masking, parallax mouse movement, and cinematic transitions.
+A visually immersive, GTA VI–inspired animated landing page built with **React**, **GSAP**, and **Tailwind CSS**.  
+This project focuses on cinematic intro animations, smooth transitions, interactive UI elements, and modern React component architecture.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-- 🔥 SVG mask intro animation using **GSAP Timeline**
-- 🎥 Smooth scale, rotate & opacity transitions
-- 🖱️ Mouse-move based **parallax effect**
+- 🔥 SVG mask–based intro animation using GSAP Timeline
+- 🎥 Smooth scale, rotate, and opacity transitions
+- 🖱️ Mouse-move based parallax effect
 - 🧩 Conditional rendering after animation completion
+- 📂 Component-based architecture (Navbar, Sections, Toggle Button)
+- 🔁 Expandable & collapsible content sections
+- 🎯 Interactive button animations using GSAP
 - 🎨 Fully responsive layout
-- ⚡ Built with **Vite** for fast performance
+- ⚡ Built with Vite for fast performance
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 - **React**
-- **GSAP (`@gsap/react`)**
+- **GSAP** (`@gsap/react`)
 - **Tailwind CSS**
 - **Vite**
 - **Remix Icon**
 
 ---
 
-🧠 What I Learned
+# 🧠 What I Learned
 
-1.Creating SVG mask animations using GSAP
-2.Managing animation flow with GSAP timelines
-3.Handling animations conditionally with React state
-4.Implementing mouse-based parallax effects
-5.Combining Tailwind CSS with complex animations
-
----
-
-⚠️ Disclaimer
-
-This project is for educational and practice purposes only.
-All visual inspiration belongs to Rockstar Games. No assets are used commercially.
-
----
-
-⭐ Support
-
-If you like this project, please consider giving it a star ⭐
-It really motivates me to build more!
+- Creating SVG mask animations using GSAP
+- Managing complex animation flows with GSAP timelines
+- Conditional rendering using React state
+- Component communication using props
+- Lifting state up for coordinated UI behavior
+- Implementing mouse-based parallax effects
+- Building interactive UI elements with GSAP
+- Structuring scalable React projects
