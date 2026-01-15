@@ -39,3 +39,18 @@ This project focuses on cinematic intro animations, smooth transitions, interact
 - Implementing mouse-based parallax effects
 - Building interactive UI elements with GSAP
 - Structuring scalable React projects
+
+---
+
+⚠️ Disclaimer
+
+This project is created for educational and practice purposes only.
+All visual inspiration and branding belong to Rockstar Games.
+No assets are used for commercial purposes.
+
+---
+
+⭐ Support
+
+If you like this project, please consider giving it a ⭐
+It motivates me to keep building and learning 🚀
