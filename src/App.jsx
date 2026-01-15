@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
+import Navbar from "./components/Navbar";
+import Section from "./components/Section";
+import ToggleButton from "./components/ToggleButton";
+import InfoSection from "./components/InfoSection";
 
 function App() {
   let [showContent, setShowContent] = useState(false);
+
+  const [showSections, setShowSections] = useState(true);
+
+
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -31,37 +39,37 @@ function App() {
   });
 
   useGSAP(() => {
-    if(!showContent) return;
+    if (!showContent) return;
 
-    gsap.to(".main",{
-      scale:1,
-      rotate:0,
-      delay:"-1",
-      duration:2,
-      ease:"Expo.easeInOut"
+    gsap.to(".main", {
+      scale: 1,
+      rotate: 0,
+      delay: "-1",
+      duration: 2,
+      ease: "Expo.easeInOut",
     });
-    gsap.to(".sky",{
-      scale:1.1,
-      rotate:0,
-      delay:"-.8",
-      duration:2,
-      ease:"Expo.easeInOut"
+    gsap.to(".sky", {
+      scale: 1.1,
+      rotate: 0,
+      delay: "-.8",
+      duration: 2,
+      ease: "Expo.easeInOut",
     });
-    gsap.to(".bg",{
-      scale:1.1,
-      rotate:0,
-      delay:"-.8",
-      duration:2,
-      ease:"Expo.easeInOut"
+    gsap.to(".bg", {
+      scale: 1.1,
+      rotate: 0,
+      delay: "-.8",
+      duration: 2,
+      ease: "Expo.easeInOut",
     });
-    gsap.to(".character",{
-      scale:1.5,
-      x:"-10%",
-      rotate:0,
-      bottom:"-12%",
-      delay:"-.8",
-      duration:2,
-      ease:"Expo.easeInOut"
+    gsap.to(".character", {
+      scale: 1.5,
+      x: "-10%",
+      rotate: 0,
+      bottom: "-12%",
+      delay: "-.8",
+      duration: 2,
+      ease: "Expo.easeInOut",
     });
 
     const main = document.querySelector(".main");
@@ -79,6 +87,22 @@ function App() {
       });
     });
   }, [showContent]);
+
+  //section data like title and story (if works)
+  const sectionsData = [
+    {
+      title: "Story",
+      text: " GTA VI introduces a modern story set in Vice City.",
+    },
+    {
+      title: "World",
+      text: " Explore a massive open world inspired by Florida.",
+    },
+    {
+      title: "Characters",
+      text: " Play as multiple characters with deep narratives.",
+    },
+  ];
 
   return (
     <>
@@ -114,18 +138,7 @@ function App() {
       {showContent && (
         <div className="main w-full h-screen rotate-[-10deg] scale-[1.7]  bg-black">
           <div className="landing overflow-hidden relative w-full h-screen bg-black">
-            <div className="absolute top-0 left-0 z-[10] navbar w-full py-10 px-10 ">
-              <div className="logo flex gap-7 ">
-                <div className="lines flex flex-col gap-[5px]">
-                  <div className="line w-15 h-2 bg-white"></div>
-                  <div className="line w-9 h-2 bg-white"></div>
-                  <div className="line w-5 h-2 bg-white"></div>
-                </div>
-                <h3 className="text-4xl -mt-[10px] leading-none text-white">
-                  Rokstar
-                </h3>
-              </div>
-            </div>
+            <Navbar title="Rockstar" />
 
             <div className="imagesdiv relative w-full h-screen  overflow-hidden">
               <img
@@ -153,12 +166,12 @@ function App() {
               />
             </div>
             <div className="btmbar text-white w-full absolute bottom-0 left-0 py-15 px-10 bg-gradient-to-t from-black to-transparent">
-              <div className="flex gap-4 items-center">
-                <i className=" text-2xl ri-arrow-down-line"></i>
-                <h3 className="text-xl font-[Helvetica_Now_Display]">
-                  Scroll Down
-                </h3>
-              </div>
+              
+              <ToggleButton 
+              show={showSections}
+              onToggle={()=> setShowSections(!showSections)}
+              />
+
               <img
                 className="absolute top-1/2 left-1/2      h-[55px] -translate-x-1/2 -translate-y-1/2"
                 src="./ps5.png"
@@ -166,22 +179,9 @@ function App() {
               />
             </div>
           </div>
-          <div className="w-full overflow-hidden h-screen flex  items-center justify-center bg-black">
-            <div className="cntnr text-white flex w-full h-[80%]  ">
-              <div className="limg relative w-1/2 h-full">
-                <img className="absolute scale-[0.92] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./imag.png" />
-              </div>
-              <div className="rg w-[50%] ">
-                <h1 className="text-7xl">Still Running,</h1>
-                <h1 className="text-7xl">Not Hunting</h1>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea reprehenderit iure illo fuga expedita! Dolore quasi velit asperiores quam cum officia tempore sint?</p>
-                <p className="mt-3 text-xl font-[Helvetica_Now_Display]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laborum animi aperiam aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ratione cumque? Cumque odio quibusdam similique culpa facere illo.
-                </p>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea reprehenderit iure illo fuga expedita! Dolore quasi velit asperiores quam cum officia tempore sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, tempora!</p>
-                <button className="bg-yellow-500 mt-5 px-8 py-5 text-2xl text-black">Download Now!</button>
-              </div>
-            </div>
-          </div>
+          {showSections && (
+          <InfoSection sectionsData={sectionsData} />
+          )}
         </div>
       )}
     </>
