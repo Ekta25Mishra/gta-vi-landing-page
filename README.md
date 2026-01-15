@@ -54,3 +54,8 @@ No assets are used for commercial purposes.
 
 If you like this project, please consider giving it a ⭐
 It motivates me to keep building and learning 🚀
+
+---
+
+🚀 Live Demo
+https://gta-vi-landing-page-omega.vercel.app/
